@@ -248,8 +248,11 @@
       .faucet-desc__review-stats{grid-template-columns:1fr;gap:10px}
       .faucet-desc__guarantees-bar{grid-template-columns:1fr 1fr;gap:10px}
       .faucet-desc__ugc-grid{grid-template-columns:repeat(2,1fr)}
-      .faucet-desc__comparison-table{font-size:12px}
-      .faucet-desc__comparison-table th,.faucet-desc__comparison-table td{padding:10px 8px}
+      .faucet-desc__comparison-table{font-size:11px;display:block;overflow-x:auto}
+      .faucet-desc__comparison-table th,.faucet-desc__comparison-table td{padding:8px 6px;word-break:break-word}
+      .faucet-desc__comparison-table th{font-size:11px}
+      .faucet-desc__comparison-table td:first-child{width:25%;min-width:70px}
+      .faucet-desc__comparison-table td:nth-child(2),.faucet-desc__comparison-table td:nth-child(3){width:37.5%}
     }
   </style>
 </head>
@@ -266,8 +269,7 @@
 
     <!-- CTA SECTION (NEW) -->
     <section class="faucet-desc__cta-section">
-      <div class="faucet-desc__price">From $895</div>
-      <div class="faucet-desc__price-note">Handcrafted to order • 4-6 week delivery</div>
+      <div class="faucet-desc__price-note" style="font-size: 16px; margin-bottom: 20px;">Handcrafted to order • 8-10 day delivery</div>
       <button class="faucet-desc__cta-primary" onclick="scrollToConfig()">Configure & Add to Cart</button>
       <div class="faucet-desc__trust-bar">
         <div>Handcrafted to Order</div>
@@ -308,7 +310,7 @@
 
     <!-- SCARCITY NOTICE (NEW) -->
     <div class="faucet-desc__scarcity-notice">
-      ⏱️ <strong>Limited Monthly Production:</strong> Due to the handcrafted nature, we can only produce 50 faucets per month. Current lead time: 4-6 weeks. <a href="#configure">Reserve yours today</a>
+      ⏱️ <strong>Limited Production:</strong> Due to the handcrafted nature, we can only produce a limited quantity each month. <a href="#configure">Reserve yours today</a>
     </div>
 
     <!-- HERO IMAGE -->
@@ -426,13 +428,6 @@
         </div>
       </div>
 
-      <!-- NEW: Review Highlights -->
-      <div class="faucet-desc__review-highlights">
-        <div class="highlight">⭐ "Quality" mentioned in 87% of reviews</div>
-        <div class="highlight">⭐ "Beautiful" mentioned in 92% of reviews</div>
-        <div class="highlight">⭐ "Worth the wait" mentioned in 76% of reviews</div>
-      </div>
-
       <div style="position: relative;">
         <button class="faucet-desc__review-arrow faucet-desc__review-arrow--left" onclick="scrollReviewsLeft()">‹</button>
         <button class="faucet-desc__review-arrow faucet-desc__review-arrow--right" onclick="scrollReviewsRight()">›</button>
@@ -529,11 +524,6 @@
             <td>✓ 5-year fixture / 1-year parts warranty</td>
             <td>✗ 1-year typical (if any)</td>
           </tr>
-          <tr>
-            <td>Expected Lifespan</td>
-            <td>✓ 20+ years with proper care</td>
-            <td>✗ 3-5 years before replacement needed</td>
-          </tr>
         </tbody>
       </table>
     </section>
@@ -629,26 +619,6 @@
       <div style="direction: ltr;">
         <h3 style="margin-bottom: 15px; color: var(--primary); font-size: 20px; font-weight: 600;">Professional-Quality Installation Made Easy</h3>
         <p style="color: var(--muted); line-height: 1.7;">Designed for standard 8-inch spread configurations with straightforward installation. Compatible with regional plumbing standards (1/2" NPT for USA, 1/2" BSP for UK/EU) and includes all necessary mounting hardware. The detailed manual guides you through every step, making professional-quality installation achievable for DIY enthusiasts.</p>
-      </div>
-    </section>
-
-    <!-- CUSTOMER PHOTOS (NEW) -->
-    <section class="faucet-desc__ugc">
-      <h2>Real Kitchens, Real Stories</h2>
-      <p class="faucet-desc__ugc-intro">See how our customers styled their kitchens with handcrafted brass</p>
-      <div class="faucet-desc__ugc-grid">
-        <div class="faucet-desc__ugc-item">
-          <img src="https://www.insideast.com/cdn/shop/files/Untitled_design_58.png" alt="Customer kitchen 1">
-          <div class="faucet-desc__ugc-credit">@sarahskitchen</div>
-        </div>
-        <div class="faucet-desc__ugc-item">
-          <img src="https://www.insideast.com/cdn/shop/files/il_1588xN.4866831220_hq7a.webp?v=1759859304" alt="Customer kitchen 2">
-          <div class="faucet-desc__ugc-credit">@modernfarmhouse</div>
-        </div>
-        <div class="faucet-desc__ugc-item">
-          <img src="https://www.insideast.com/cdn/shop/files/2.jpg?v=1759860725" alt="Customer kitchen 3">
-          <div class="faucet-desc__ugc-credit">@designlover_jess</div>
-        </div>
       </div>
     </section>
 
@@ -775,7 +745,7 @@
 
       <details>
         <summary>How long does shipping take?</summary>
-        <p>Each faucet is handcrafted to order in Morocco. Standard production and shipping takes 4-6 weeks. Expedited options may be available—please contact us for details. We'll keep you updated throughout the process with tracking information.</p>
+        <p>Delivery typically takes 8-10 days. Each faucet is handcrafted to order in Morocco by our skilled artisans. We'll keep you updated throughout the process with tracking information.</p>
       </details>
 
       <details>
@@ -833,7 +803,7 @@
 
 <!-- STICKY CTA BAR (Mobile) -->
 <div class="faucet-desc__sticky-cta">
-  <button onclick="scrollToConfig()">Configure & Add to Cart - From $895</button>
+  <button onclick="scrollToConfig()">Configure & Add to Cart</button>
 </div>
 
 <script>
