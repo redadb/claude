@@ -1,0 +1,1206 @@
+<style>
+  :root {
+    --gold: #b8860b;
+    --gold-light: #d4a84a;
+    --dark: #0f0f0f;
+    --gray-900: #1a1a1a;
+    --gray-700: #404040;
+    --gray-500: #6b6b6b;
+    --gray-300: #a0a0a0;
+    --gray-100: #f5f5f5;
+    --white: #ffffff;
+    --success: #10b981;
+    --radius: 16px;
+    --radius-sm: 8px;
+  }
+
+  .bf {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: var(--gray-900);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bf * {
+    box-sizing: border-box;
+  }
+
+  .bf__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Hero Section */
+  .bf__hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--gray-900) 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .bf__badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .bf__hero-title {
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bf__hero-subtitle {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-300);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  .bf__hero-cta {
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 16px 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .bf__hero-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(184, 134, 11, 0.4);
+  }
+
+  .bf__delivery-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--gray-300);
+  }
+
+  /* Trust Bar */
+  .bf__trust {
+    background: var(--gray-100);
+    padding: 30px 0;
+  }
+
+  .bf__trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+  }
+
+  .bf__trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bf__trust-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+  }
+
+  .bf__trust-text {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 14px;
+  }
+
+  /* Image Gallery */
+  .bf__gallery {
+    padding: 60px 0;
+    background: var(--white);
+  }
+
+  .bf__main-image {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .bf__main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bf__thumb-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .bf__thumb {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .bf__thumb:hover {
+    border-color: var(--gold);
+    transform: scale(1.05);
+  }
+
+  .bf__thumb img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Section Title */
+  .bf__section-title {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: var(--gray-900);
+  }
+
+  .bf__section-subtitle {
+    color: var(--gray-500);
+    font-size: 16px;
+    margin: 0 0 40px;
+    max-width: 600px;
+  }
+
+  /* Features */
+  .bf__features {
+    padding: 80px 0;
+    background: var(--gray-100);
+  }
+
+  .bf__features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .bf__feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .bf__feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--gold);
+  }
+
+  .bf__feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .bf__feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: var(--gray-900);
+  }
+
+  .bf__feature-desc {
+    color: var(--gray-500);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Comparison */
+  .bf__compare {
+    padding: 80px 0;
+    background: var(--white);
+  }
+
+  .bf__compare-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .bf__compare-card {
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 2px solid;
+  }
+
+  .bf__compare-card--ours {
+    background: linear-gradient(135deg, #fef9e7 0%, #fff 100%);
+    border-color: var(--gold);
+  }
+
+  .bf__compare-card--theirs {
+    background: var(--gray-100);
+    border-color: var(--gray-300);
+  }
+
+  .bf__compare-label {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .bf__compare-card--ours .bf__compare-label {
+    color: var(--gold);
+  }
+
+  .bf__compare-card--theirs .bf__compare-label {
+    color: var(--gray-500);
+  }
+
+  .bf__compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bf__compare-list li {
+    padding: 12px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .bf__compare-list li:last-child {
+    border-bottom: none;
+  }
+
+  .bf__compare-icon {
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .bf__compare-card--ours .bf__compare-icon {
+    color: var(--success);
+  }
+
+  .bf__compare-card--theirs .bf__compare-icon {
+    color: #ef4444;
+  }
+
+  /* Specs */
+  .bf__specs {
+    padding: 80px 0;
+    background: var(--dark);
+    color: var(--white);
+  }
+
+  .bf__specs .bf__section-title,
+  .bf__specs .bf__section-subtitle {
+    color: var(--white);
+  }
+
+  .bf__specs .bf__section-subtitle {
+    color: var(--gray-300);
+  }
+
+  .bf__specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .bf__spec-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--gold);
+  }
+
+  .bf__spec-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .bf__spec-value {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* Configuration */
+  .bf__config {
+    padding: 80px 0;
+    background: var(--white);
+  }
+
+  .bf__config-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .bf__config-group h3 {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: var(--gray-900);
+    font-weight: 600;
+  }
+
+  .bf__config-items {
+    display: grid;
+    gap: 12px;
+  }
+
+  .bf__config-item {
+    background: var(--gray-100);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bf__config-item:hover {
+    border-color: var(--gold);
+    background: var(--white);
+  }
+
+  .bf__config-item span {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .bf__config-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .bf__config-img {
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bf__config-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .bf__config-img:hover img {
+    transform: scale(1.1);
+  }
+
+  .bf__config-img figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+    padding: 40px 15px 15px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Reviews */
+  .bf__reviews {
+    padding: 80px 0;
+    background: var(--gray-100);
+  }
+
+  .bf__reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .bf__review {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .bf__review-stars {
+    color: var(--gold);
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .bf__review-text {
+    color: var(--gray-700);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .bf__review-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  .bf__review-name {
+    font-weight: 700;
+    color: var(--gray-900);
+  }
+
+  .bf__review-badge {
+    background: var(--success);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* Package */
+  .bf__package {
+    padding: 80px 0;
+    background: var(--white);
+  }
+
+  .bf__package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .bf__package-item {
+    background: var(--gray-100);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .bf__package-check {
+    width: 24px;
+    height: 24px;
+    background: var(--success);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* FAQ */
+  .bf__faq {
+    padding: 80px 0;
+    background: var(--gray-100);
+  }
+
+  .bf__faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .bf__faq-item {
+    background: var(--white);
+    margin-bottom: 15px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .bf__faq-q {
+    width: 100%;
+    text-align: left;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+
+  .bf__faq-q:hover {
+    background: var(--gray-100);
+  }
+
+  .bf__faq-q::after {
+    content: "+";
+    font-size: 24px;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .bf__faq-item.active .bf__faq-q::after {
+    content: "−";
+  }
+
+  .bf__faq-a {
+    padding: 0 25px 20px;
+    color: var(--gray-500);
+    font-size: 15px;
+    line-height: 1.7;
+    display: none;
+  }
+
+  .bf__faq-item.active .bf__faq-a {
+    display: block;
+  }
+
+  /* Warranty */
+  .bf__warranty {
+    padding: 80px 0;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .bf__warranty-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  .bf__warranty .bf__section-title {
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+
+  .bf__warranty-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .bf__warranty-item {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+  }
+
+  .bf__warranty-item h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: var(--gold);
+  }
+
+  .bf__warranty-item p {
+    margin: 0;
+    color: var(--gray-300);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Video */
+  .bf__video {
+    padding: 60px 0;
+    background: var(--white);
+  }
+
+  .bf__video-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .bf__video-wrapper video {
+    width: 100%;
+    display: block;
+  }
+
+  /* Final CTA */
+  .bf__final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    text-align: center;
+    color: var(--dark);
+  }
+
+  .bf__final-cta .bf__section-title {
+    color: var(--dark);
+    font-size: clamp(28px, 5vw, 42px);
+  }
+
+  .bf__final-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+
+  .bf__final-btn {
+    background: var(--dark);
+    color: var(--white);
+    border: none;
+    padding: 18px 60px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .bf__final-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Download */
+  .bf__download {
+    background: var(--gray-100);
+    padding: 25px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .bf__download h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  .bf__download p {
+    margin: 0 0 15px;
+    color: var(--gray-500);
+    font-size: 14px;
+  }
+
+  .bf__download a {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .bf__download a:hover {
+    background: var(--gold);
+    color: var(--dark);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .bf__hero {
+      padding: 40px 0;
+    }
+
+    .bf__compare-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .bf__thumb-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bf__thumb img {
+      height: 80px;
+    }
+
+    .bf__features,
+    .bf__compare,
+    .bf__specs,
+    .bf__config,
+    .bf__reviews,
+    .bf__package,
+    .bf__faq,
+    .bf__warranty {
+      padding: 50px 0;
+    }
+
+    .bf__config-img img {
+      height: 180px;
+    }
+
+    .bf__final-cta {
+      padding: 60px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bf__container {
+      padding: 0 15px;
+    }
+
+    .bf__trust-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bf__compare-card {
+      padding: 25px;
+    }
+
+    .bf__spec-item {
+      padding: 20px;
+    }
+
+    .bf__config-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .bf__config-img img {
+      height: 220px;
+    }
+
+    .bf__warranty-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="bf">
+  <!-- Hero -->
+  <section class="bf__hero">
+    <div class="bf__container">
+      <div class="bf__badge">Handcrafted in Morocco</div>
+      <h1 class="bf__hero-title">Solid Brass Kitchen Faucet</h1>
+      <p class="bf__hero-subtitle">Unlacquered bridge-style faucet that develops a unique living patina over time. A lifetime investment in character and quality.</p>
+      <button class="bf__hero-cta" onclick="document.getElementById('config').scrollIntoView({behavior:'smooth'})">Configure Your Faucet</button>
+      <div class="bf__delivery-note">Handcrafted to order • 8-10 day delivery</div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="bf__trust">
+    <div class="bf__container">
+      <div class="bf__trust-grid">
+        <div class="bf__trust-item">
+          <div class="bf__trust-icon">🛡️</div>
+          <div class="bf__trust-text">5-Year Warranty</div>
+        </div>
+        <div class="bf__trust-item">
+          <div class="bf__trust-icon">↩️</div>
+          <div class="bf__trust-text">30-Day Returns</div>
+        </div>
+        <div class="bf__trust-item">
+          <div class="bf__trust-icon">🚚</div>
+          <div class="bf__trust-text">Free Shipping</div>
+        </div>
+        <div class="bf__trust-item">
+          <div class="bf__trust-icon">💬</div>
+          <div class="bf__trust-text">Lifetime Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="bf__gallery">
+    <div class="bf__container">
+      <div class="bf__main-image">
+        <img src="https://www.insideast.com/cdn/shop/files/Untitled_design_58.png" alt="Brass Bridge Kitchen Faucet">
+      </div>
+      <div class="bf__thumb-grid">
+        <div class="bf__thumb">
+          <img src="https://www.insideast.com/cdn/shop/files/il_1588xN.4866831220_hq7a.webp?v=1759859304" alt="Faucet detail">
+        </div>
+        <div class="bf__thumb">
+          <img src="https://www.insideast.com/cdn/shop/files/8_StraightBridgeFaucetHAN0003_HandleDetail__IK-001-04-001-03-23.jpg?v=1759859654&width=1800" alt="Lever handle">
+        </div>
+        <div class="bf__thumb">
+          <img src="https://www.insideast.com/cdn/shop/files/8_StraightBridgeFaucetHAN0001_Components__IK-001-04-001-01-23.jpg" alt="Components">
+        </div>
+        <div class="bf__thumb">
+          <img src="https://cdn.shopify.com/s/files/1/0639/7329/4189/files/iap_800x800.6497423370_p11yuh0g.webp?v=1760696810" alt="Patina">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="bf__features">
+    <div class="bf__container">
+      <h2 class="bf__section-title">Premium Craftsmanship</h2>
+      <p class="bf__section-subtitle">Every detail matters when you're building something meant to last generations.</p>
+      <div class="bf__features-grid">
+        <div class="bf__feature-card">
+          <div class="bf__feature-icon">⭐</div>
+          <h3 class="bf__feature-title">Master Artisans</h3>
+          <p class="bf__feature-desc">Handcrafted by skilled Moroccan metalworkers using techniques passed down through generations.</p>
+        </div>
+        <div class="bf__feature-card">
+          <div class="bf__feature-icon">🏆</div>
+          <h3 class="bf__feature-title">Solid Brass</h3>
+          <p class="bf__feature-desc">100% solid brass construction. No hollow parts, no thin plating that wears away.</p>
+        </div>
+        <div class="bf__feature-card">
+          <div class="bf__feature-icon">✨</div>
+          <h3 class="bf__feature-title">Living Patina</h3>
+          <p class="bf__feature-desc">Unlacquered finish develops a unique character over time, becoming more beautiful with age.</p>
+        </div>
+        <div class="bf__feature-card">
+          <div class="bf__feature-icon">⚙️</div>
+          <h3 class="bf__feature-title">Ceramic Cartridges</h3>
+          <p class="bf__feature-desc">Premium 1/2" ceramic disc cartridges ensure smooth, drip-free operation for decades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="bf__compare">
+    <div class="bf__container">
+      <h2 class="bf__section-title" style="text-align:center;">The Difference Is Clear</h2>
+      <p class="bf__section-subtitle" style="text-align:center;margin:0 auto 40px;">See why artisan-crafted outperforms mass-produced every time.</p>
+      <div class="bf__compare-wrapper">
+        <div class="bf__compare-card bf__compare-card--ours">
+          <div class="bf__compare-label">Our Faucet</div>
+          <ul class="bf__compare-list">
+            <li><span class="bf__compare-icon">✓</span> Solid brass throughout</li>
+            <li><span class="bf__compare-icon">✓</span> Living patina finish</li>
+            <li><span class="bf__compare-icon">✓</span> Hand-forged by artisans</li>
+            <li><span class="bf__compare-icon">✓</span> Substantial 3.2 lbs weight</li>
+            <li><span class="bf__compare-icon">✓</span> 5-year warranty</li>
+          </ul>
+        </div>
+        <div class="bf__compare-card bf__compare-card--theirs">
+          <div class="bf__compare-label">Mass-Produced</div>
+          <ul class="bf__compare-list">
+            <li><span class="bf__compare-icon">✗</span> Brass-plated zinc/plastic</li>
+            <li><span class="bf__compare-icon">✗</span> Lacquer chips over time</li>
+            <li><span class="bf__compare-icon">✗</span> Factory assembly line</li>
+            <li><span class="bf__compare-icon">✗</span> Hollow feel at 0.8 lbs</li>
+            <li><span class="bf__compare-icon">✗</span> 1-year typical warranty</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section class="bf__specs">
+    <div class="bf__container">
+      <h2 class="bf__section-title">Technical Specifications</h2>
+      <p class="bf__section-subtitle">Engineered for perfect fit and lasting performance.</p>
+      <div class="bf__specs-grid">
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Material</div>
+          <div class="bf__spec-value">Solid Brass</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Finish</div>
+          <div class="bf__spec-value">Unlacquered (Develops Patina)</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Total Height</div>
+          <div class="bf__spec-value">12.90" (328mm)</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Spout Reach</div>
+          <div class="bf__spec-value">7.70" (195.5mm)</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Center Spread</div>
+          <div class="bf__spec-value">8.00" (203mm)</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Spout Height</div>
+          <div class="bf__spec-value">6.00" (152mm)</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Cartridge</div>
+          <div class="bf__spec-value">1/2" Ceramic Disc</div>
+        </div>
+        <div class="bf__spec-item">
+          <div class="bf__spec-label">Plumbing</div>
+          <div class="bf__spec-value">NPT (USA) / BSP (UK/EU)</div>
+        </div>
+      </div>
+      <p style="color:var(--gray-300);font-size:13px;margin-top:30px;line-height:1.6;">Requires 3 pre-drilled holes (8" center-to-center). Add 1 extra hole if selecting side sprayer. We ship correct connectors for your region by default.</p>
+      <div class="bf__download">
+        <h4>Installation Guide</h4>
+        <p>Download detailed spec sheet with diagrams and step-by-step instructions</p>
+        <a href="https://cdn.shopify.com/s/files/1/0029/6861/7006/files/Bridge_8inch_-_Lever_Handle_-_Specsheet_1.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configuration -->
+  <section class="bf__config" id="config">
+    <div class="bf__container">
+      <h2 class="bf__section-title">Configure Your Faucet</h2>
+      <p class="bf__section-subtitle">Choose the perfect size and handle style to match your kitchen.</p>
+      <div class="bf__config-options">
+        <div class="bf__config-group">
+          <h3>Body Size & Sprayer</h3>
+          <div class="bf__config-items">
+            <div class="bf__config-item">6" Regular <span>Base</span></div>
+            <div class="bf__config-item">8" King <span>+$45</span></div>
+            <div class="bf__config-item">6" + Side Sprayer <span>+$95</span></div>
+            <div class="bf__config-item">8" King + Side Sprayer <span>+$140</span></div>
+          </div>
+        </div>
+        <div class="bf__config-group">
+          <h3>Handle Style</h3>
+          <div class="bf__config-items">
+            <div class="bf__config-item">Simple Cross Handles <span>Included</span></div>
+            <div class="bf__config-item">Flat Cross Handles <span>Included</span></div>
+            <div class="bf__config-item">Lever Handles <span>Included</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bf__config-gallery">
+        <figure class="bf__config-img">
+          <img src="https://www.insideast.com/cdn/shop/files/8_StraightBridgeFaucetHAN0003_HandleDetail__IK-001-04-001-03-23.jpg?v=1759859654&width=1800" alt="Lever Handle">
+          <figcaption>Lever Handle</figcaption>
+        </figure>
+        <figure class="bf__config-img">
+          <img src="https://www.insideast.com/cdn/shop/files/8_StraightBridgeFaucetHAN0002_HandleDetail__IK-001-04-001-02-23.jpg?v=1759859654&width=1800" alt="Flat Cross Handle">
+          <figcaption>Flat Cross Handle</figcaption>
+        </figure>
+        <figure class="bf__config-img">
+          <img src="https://www.insideast.com/cdn/shop/files/8_StraightBridgeFaucetHAN0001_HandleDetail__IK-001-04-001-01-23.jpg?v=1759859654&width=1800" alt="Simple Cross Handle">
+          <figcaption>Simple Cross Handle</figcaption>
+        </figure>
+        <figure class="bf__config-img">
+          <img src="https://www.insideast.com/cdn/shop/files/PIC-11_843cc55c-b660-4b8c-b719-736b91a1ab41.jpg" alt="Side Sprayer">
+          <figcaption>Side Sprayer</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bf__reviews">
+    <div class="bf__container">
+      <h2 class="bf__section-title">Customer Reviews</h2>
+      <p class="bf__section-subtitle">Hear from homeowners who chose quality.</p>
+      <div class="bf__reviews-grid">
+        <div class="bf__review">
+          <div class="bf__review-stars">★★★★★</div>
+          <p class="bf__review-text">"Beyond expectations, the quality and weight of this faucet is impressive. I haven't stopped talking about the knobs and how they feel so luxury for the last 2 days and we don't even have it installed yet."</p>
+          <div class="bf__review-author">
+            <span class="bf__review-name">Matthew S.</span>
+            <span class="bf__review-badge">Verified</span>
+          </div>
+        </div>
+        <div class="bf__review">
+          <div class="bf__review-stars">★★★★★</div>
+          <p class="bf__review-text">"It's just as beautiful and quality material as I expected it to be, it's going to be beautiful in our new kitchen. Great customer service and responsive communication throughout the entire process."</p>
+          <div class="bf__review-author">
+            <span class="bf__review-name">Danielle C.</span>
+            <span class="bf__review-badge">Verified</span>
+          </div>
+        </div>
+        <div class="bf__review">
+          <div class="bf__review-stars">★★★★★</div>
+          <p class="bf__review-text">"We are so pleased with the quality and craftmanship! The unlacquered brass is stunning and already gaining a beautiful patina. The quality and craftsmanship is second to none!"</p>
+          <div class="bf__review-author">
+            <span class="bf__review-name">Lindsey H.</span>
+            <span class="bf__review-badge">Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Package -->
+  <section class="bf__package">
+    <div class="bf__container">
+      <h2 class="bf__section-title">What's Included</h2>
+      <p class="bf__section-subtitle">Everything you need for installation.</p>
+      <div class="bf__package-grid">
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Bridge Spout Assembly
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Two Handles (Your Style)
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Ceramic Cartridges
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          17" Supply Hoses
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Mounting Hardware
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Aerator Assembly
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Installation Manual
+        </div>
+        <div class="bf__package-item">
+          <div class="bf__package-check">✓</div>
+          Professional Support
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bf__faq">
+    <div class="bf__container">
+      <h2 class="bf__section-title" style="text-align:center;">Frequently Asked Questions</h2>
+      <div class="bf__faq-list">
+        <div class="bf__faq-item">
+          <button class="bf__faq-q">How does the brass patina develop?</button>
+          <div class="bf__faq-a">Unlacquered brass naturally oxidizes over time, developing a rich, darker patina. The rate depends on water chemistry, humidity, and use patterns. Each faucet develops its own unique character.</div>
+        </div>
+        <div class="bf__faq-item">
+          <button class="bf__faq-q">Can I polish the brass to restore the original finish?</button>
+          <div class="bf__faq-a">Yes! Use brass polish or a mixture of lemon juice and baking soda to restore the bright brass finish. Many customers love the lived-in look, but you can maintain the golden shine with regular polishing.</div>
+        </div>
+        <div class="bf__faq-item">
+          <button class="bf__faq-q">Is this compatible with my plumbing?</button>
+          <div class="bf__faq-a">The faucet is designed for standard 1/2" NPT (USA) or 1/2" BSP (UK/Europe) connections. It requires three pre-drilled holes with 8" center-to-center spacing. Most standard kitchen sinks accommodate this configuration.</div>
+        </div>
+        <div class="bf__faq-item">
+          <button class="bf__faq-q">How long does shipping take?</button>
+          <div class="bf__faq-a">Delivery typically takes 8-10 days. Each faucet is handcrafted to order in Morocco by our skilled artisans. We'll keep you updated throughout the process with tracking information.</div>
+        </div>
+        <div class="bf__faq-item">
+          <button class="bf__faq-q">What if I'm not satisfied?</button>
+          <div class="bf__faq-a">We offer a 30-day home trial. If you're not completely satisfied, return it for a full refund. We also provide a 5-year warranty on fixtures and 1-year on parts, plus lifetime customer support.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="bf__video">
+    <div class="bf__container">
+      <div class="bf__video-wrapper">
+        <video playsinline loop muted autoplay>
+          <source src="https://cdn.shopify.com/videos/c/o/v/f28424641a1a4c00869531ea768d1522.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warranty -->
+  <section class="bf__warranty">
+    <div class="bf__container">
+      <div class="bf__warranty-icon">🛡️</div>
+      <h2 class="bf__section-title">Warranty & Guarantee</h2>
+      <div class="bf__warranty-features">
+        <div class="bf__warranty-item">
+          <h4>5-Year Fixture Warranty</h4>
+          <p>Full coverage on plumbing and accessories for residential use against manufacturing defects.</p>
+        </div>
+        <div class="bf__warranty-item">
+          <h4>1-Year Parts Warranty</h4>
+          <p>Coverage on wearable parts including cartridges, hoses, O-rings, and cables.</p>
+        </div>
+        <div class="bf__warranty-item">
+          <h4>30-Day Home Trial</h4>
+          <p>Not satisfied? Return for a full refund within 30 days, no questions asked.</p>
+        </div>
+      </div>
+      <p style="margin-top:30px;font-size:13px;color:var(--gray-300);">Email contact@insideast.com with any warranty questions. Note: unlacquered brass patina is expected and not a defect.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bf__final-cta">
+    <div class="bf__container">
+      <h2 class="bf__section-title">Ready to Transform Your Kitchen?</h2>
+      <p>Join hundreds of homeowners who chose quality that lasts.</p>
+      <button class="bf__final-btn" onclick="document.getElementById('config').scrollIntoView({behavior:'smooth'})">Configure & Order Now</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.bf__faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.bf__faq-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    });
+  });
+
+  // Image Gallery (optional enhancement)
+  document.querySelectorAll('.bf__thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const mainImg = document.querySelector('.bf__main-image img');
+      const thumbImg = thumb.querySelector('img');
+      mainImg.src = thumbImg.src;
+    });
+  });
+</script>
