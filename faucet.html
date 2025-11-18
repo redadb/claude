@@ -14,24 +14,27 @@
     .faucet-desc__video-container{position:relative;width:100%;max-width:500px;margin:0 auto;overflow:hidden;border-radius:12px;box-shadow:0 10px 40px var(--shadow)}
     .faucet-desc__video-container video{width:100%;height:auto;display:block}
 
-    .faucet-desc__specs-section{margin:clamp(60px,8vw,100px) 0}
+    .faucet-desc__specs-section{margin:clamp(60px,8vw,100px) -16px;background:linear-gradient(135deg,var(--bg-dark-brown) 0%,#5A3D2A 100%);padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px);color:var(--primary-light)}
+    .faucet-desc__specs-section h2{color:var(--primary-light);border-bottom-color:var(--accent);text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+    .faucet-desc__specs-section h3{color:var(--primary-light);text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+    .faucet-desc__specs-section p{color:var(--muted-light)}
 
-    .faucet-desc__specs-table{width:100%;border-collapse:collapse;margin-bottom:30px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px var(--shadow);border:1px solid var(--border-color)}
-    .faucet-desc__specs-table tr{border-bottom:1px solid rgba(73,48,32,.15)}
+    .faucet-desc__specs-table{width:100%;border-collapse:collapse;margin-bottom:30px;background:rgba(255,248,218,.05);border-radius:8px;overflow:hidden;box-shadow:0 2px 8px var(--shadow-dark);border:2px solid rgba(249,88,69,.3)}
+    .faucet-desc__specs-table tr{border-bottom:1px solid rgba(249,88,69,.2)}
     .faucet-desc__specs-table tr:last-child{border-bottom:none}
-    .faucet-desc__specs-table td{padding:12px 20px;font-size:14px}
-    .faucet-desc__specs-table td:first-child{font-weight:700;color:var(--primary);width:40%;background:var(--bg-warm)}
-    .faucet-desc__specs-table td:last-child{color:var(--muted-dark)}
+    .faucet-desc__specs-table td{padding:12px 20px;font-size:14px;color:var(--primary-light)}
+    .faucet-desc__specs-table td:first-child{font-weight:700;color:var(--accent);width:40%;background:rgba(1,2,51,.3)}
+    .faucet-desc__specs-table td:last-child{color:var(--muted-light)}
 
-    .faucet-desc__dimensions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;background:var(--bg-warm);padding:20px;border-radius:8px;margin:15px 0;border:2px solid var(--border-color)}
+    .faucet-desc__dimensions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;background:rgba(1,2,51,.2);padding:20px;border-radius:8px;margin:15px 0;border:2px solid var(--accent)}
     .faucet-desc__dimension-card{text-align:center;padding:10px}
-    .faucet-desc__dimension-label{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--border-color);margin-bottom:5px;font-weight:600}
-    .faucet-desc__dimension-value{font-size:20px;font-weight:700;color:var(--primary)}
-    .faucet-desc__dimension-unit{font-size:11px;color:var(--muted-dark);margin-top:2px}
+    .faucet-desc__dimension-label{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:5px;font-weight:600}
+    .faucet-desc__dimension-value{font-size:20px;font-weight:700;color:var(--primary-light)}
+    .faucet-desc__dimension-unit{font-size:11px;color:var(--muted-light);margin-top:2px}
 
-    .faucet-desc__download{background:linear-gradient(135deg,#fff 0%,var(--bg-warm) 100%);padding:25px;border-radius:8px;text-align:center;margin:40px 0;border:2px solid var(--border-color)}
-    .faucet-desc__download h3{color:var(--primary)}
-    .faucet-desc__download p{color:var(--muted-dark);margin-bottom:15px}
+    .faucet-desc__download{background:rgba(255,248,218,.08);padding:25px;border-radius:8px;text-align:center;margin:40px 0;border:2px solid var(--accent)}
+    .faucet-desc__download h3{color:var(--primary-light);text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+    .faucet-desc__download p{color:var(--muted-light);margin-bottom:15px}
     .faucet-desc__download a{display:inline-block;background:var(--accent);color:#fff;padding:12px 30px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;transition:background .3s ease}
     .faucet-desc__download a:hover{background:var(--accent-hover)}
 
@@ -44,12 +47,12 @@
     .faucet-desc__warranty-badge-content p{margin:0;font-size:clamp(.85rem,1.5vw,1rem);color:var(--muted-dark);line-height:1.5}
     .faucet-desc__warranty-badge-content p strong{display:inline;font-size:inherit;font-weight:700;color:var(--border-color)}
 
-    .faucet-desc__config{margin:60px 0}
-    .faucet-desc__config h2{font-size:28px;margin-bottom:15px;color:var(--primary);font-weight:600;text-align:center}
-    .faucet-desc__config-intro{text-align:center;color:var(--muted-dark);font-size:15px;line-height:1.7;max-width:700px;margin:0 auto 35px}
+    .faucet-desc__config{margin:60px -16px;background:linear-gradient(135deg,var(--bg-dark-brown) 0%,#5A3D2A 100%);padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px);color:var(--primary-light)}
+    .faucet-desc__config h2{font-size:28px;margin-bottom:15px;color:var(--primary-light);font-weight:600;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+    .faucet-desc__config-intro{text-align:center;color:var(--muted-light);font-size:15px;line-height:1.7;max-width:700px;margin:0 auto 35px}
 
     .faucet-desc__config-slider-wrap{position:relative;overflow:hidden;margin:40px 0;max-width:800px;margin-left:auto;margin-right:auto}
-    .faucet-desc__config-slider-title{text-align:center;font-size:22px;font-weight:700;color:var(--border-color);margin-bottom:25px;text-transform:uppercase;letter-spacing:1px}
+    .faucet-desc__config-slider-title{text-align:center;font-size:22px;font-weight:700;color:var(--accent);margin-bottom:25px;text-transform:uppercase;letter-spacing:1px}
     .faucet-desc__config-slider-container{position:relative;overflow-x:auto;overflow-y:hidden;border-radius:12px;scroll-behavior:smooth;scroll-snap-type:x mandatory;max-height:500px;padding:0 40px}
     .faucet-desc__config-slider-container::-webkit-scrollbar{height:8px}
     .faucet-desc__config-slider-container::-webkit-scrollbar-track{background:var(--bg-warm);border-radius:10px}
@@ -63,8 +66,8 @@
     .faucet-desc__config-arrow--left{left:4px}
     .faucet-desc__config-arrow--right{right:4px}
 
-    .faucet-desc__config-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;background:linear-gradient(135deg,#fff 0%,var(--bg-warm) 100%);padding:25px;border-radius:8px;border:2px solid var(--border-color)}
-    .faucet-desc__config-section h3{font-size:16px;color:var(--border-color);margin-bottom:12px;font-weight:600;text-align:center}
+    .faucet-desc__config-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;background:rgba(1,2,51,.2);padding:25px;border-radius:8px;border:2px solid var(--accent)}
+    .faucet-desc__config-section h3{font-size:16px;color:var(--primary-light);margin-bottom:12px;font-weight:600;text-align:center}
     .faucet-desc__config-options{display:grid;gap:8px}
     .faucet-desc__config-section:first-child .faucet-desc__config-options{grid-template-columns:1fr 1fr}
     .faucet-desc__config-section:last-child .faucet-desc__config-options{grid-template-columns:1fr}
@@ -94,15 +97,15 @@
     .faucet-desc__review-highlight{font-size:12px;color:var(--border-color);font-style:italic;border-left:3px solid var(--accent);padding-left:10px}
 
     /* ========== FEATURES GRID - IMPROVED ========== */
-    .faucet-desc__features{margin:clamp(60px,8vw,100px) 0}
-    .faucet-desc__features h2{font-size:clamp(22px,4vw,28px);margin-bottom:clamp(20px,4vw,30px);color:var(--primary);font-weight:600;border-bottom:2px solid var(--border-color);padding-bottom:15px}
+    .faucet-desc__features{margin:clamp(60px,8vw,100px) -16px;background:linear-gradient(135deg,var(--bg-dark-brown) 0%,#5A3D2A 100%);padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px);color:var(--primary-light)}
+    .faucet-desc__features h2{font-size:clamp(22px,4vw,28px);margin-bottom:clamp(20px,4vw,30px);color:var(--primary-light);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:15px;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
     .faucet-desc__features-list{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin:0;padding:0;list-style:none}
-    .faucet-desc__features-list li{display:flex;flex-direction:column;gap:15px;padding:20px;background:#fff;border-radius:12px;border:2px solid var(--border-color);box-shadow:0 2px 8px var(--shadow);transition:all .3s ease}
-    .faucet-desc__features-list li:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.12);border-color:var(--accent)}
-    .faucet-desc__feature-icon{width:50px;height:50px;background:var(--bg-warm);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);border:2px solid var(--accent);align-self:flex-start}
+    .faucet-desc__features-list li{display:flex;flex-direction:column;gap:15px;padding:20px;background:rgba(255,248,218,.08);border-radius:12px;border:2px solid rgba(249,88,69,.3);box-shadow:0 2px 8px var(--shadow-dark);transition:all .3s ease}
+    .faucet-desc__features-list li:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.25);border-color:var(--accent)}
+    .faucet-desc__feature-icon{width:50px;height:50px;background:rgba(249,88,69,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);border:2px solid var(--accent);align-self:flex-start}
     .faucet-desc__feature-icon svg{width:28px;height:28px}
-    .faucet-desc__feature-content h4{font-size:clamp(15px,2vw,16px);font-weight:700;margin-bottom:8px;color:var(--primary);line-height:1.3}
-    .faucet-desc__feature-content p{font-size:clamp(13px,1.5vw,14px);color:var(--muted-dark);line-height:1.6;margin:0}
+    .faucet-desc__feature-content h4{font-size:clamp(15px,2vw,16px);font-weight:700;margin-bottom:8px;color:var(--primary-light);line-height:1.3}
+    .faucet-desc__feature-content p{font-size:clamp(13px,1.5vw,14px);color:var(--muted-light);line-height:1.6;margin:0}
 
     .faucet-desc__package{margin:clamp(60px,8vw,100px) 0}
     .faucet-desc__package h2{font-size:28px;margin-bottom:30px;color:var(--primary);font-weight:600;border-bottom:2px solid var(--border-color);padding-bottom:15px}
@@ -111,16 +114,16 @@
     .faucet-desc__package-list li:hover{background:#fff;transform:translateY(-2px);box-shadow:0 2px 8px var(--shadow);border-color:var(--accent)}
     .faucet-desc__package-list li:before{content:"✓";color:var(--accent);font-weight:bold;font-size:14px;flex-shrink:0}
 
-    .faucet-desc__faq{margin-top:clamp(60px,8vw,100px)}
-    .faucet-desc__faq h2{font-size:28px;margin-bottom:20px;color:var(--primary);font-weight:600;border-bottom:2px solid var(--border-color);padding-bottom:15px}
-    .faucet-desc__faq details{border:none;border-radius:6px;padding:15px;background:var(--bg-warm);box-shadow:0 4px 15px var(--shadow);transition:all .3s ease;margin-bottom:10px;border:2px solid var(--border-color)}
-    .faucet-desc__faq details:hover{box-shadow:0 4px 12px var(--shadow);transform:translateX(4px);border-color:var(--accent)}
-    .faucet-desc__faq summary{font-weight:600;color:var(--primary);outline:none;user-select:none;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:clamp(15px,1.5vw,16px)}
+    .faucet-desc__faq{margin-top:clamp(60px,8vw,100px);background:linear-gradient(135deg,var(--bg-dark-brown) 0%,#5A3D2A 100%);padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px);margin-left:-16px;margin-right:-16px;color:var(--primary-light)}
+    .faucet-desc__faq h2{font-size:28px;margin-bottom:20px;color:var(--primary-light);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:15px;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
+    .faucet-desc__faq details{border:none;border-radius:6px;padding:15px;background:rgba(255,248,218,.08);box-shadow:0 4px 15px var(--shadow-dark);transition:all .3s ease;margin-bottom:10px;border:1px solid rgba(249,88,69,.3)}
+    .faucet-desc__faq details:hover{box-shadow:0 4px 12px rgba(0,0,0,.25);transform:translateX(4px)}
+    .faucet-desc__faq summary{font-weight:600;color:var(--primary-light);outline:none;user-select:none;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:clamp(15px,1.5vw,16px)}
     .faucet-desc__faq summary::before{content:"→";color:var(--accent);font-weight:bold;font-size:1.2em;transition:transform .3s ease}
     .faucet-desc__faq details[open] summary::before{transform:rotate(90deg)}
     .faucet-desc__faq summary:hover{color:var(--accent)}
     .faucet-desc__faq details[open] summary{margin-bottom:10px;color:var(--accent)}
-    .faucet-desc__faq p{color:var(--muted-dark);line-height:1.7;font-size:clamp(14px,1.5vw,15px);margin:0}
+    .faucet-desc__faq p{color:var(--muted-light);line-height:1.7;font-size:clamp(14px,1.5vw,15px);margin:0}
 
     .ie-warranty{font-family:inherit;margin:clamp(40px,6vw,60px) 0;border:2px solid var(--border-color);border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#fff 0%,var(--bg-warm) 100%);box-shadow:0 4px 15px var(--shadow)}
     .ie-warranty__top{display:flex;align-items:center;gap:.75rem;padding:1.5rem 1.5rem 1rem;background:var(--border-color);color:var(--primary-light)}
@@ -169,14 +172,14 @@
     .faucet-desc__comparison-table tr:hover{background:rgba(73,48,32,.03)}
 
     /* Guarantee Box */
-    .faucet-desc__guarantee-box{background:linear-gradient(135deg,#fff 0%,var(--bg-warm) 100%);border:2px solid var(--accent);border-radius:12px;padding:clamp(30px,4vw,50px) clamp(20px,3vw,30px);margin:40px 0;box-shadow:0 8px 25px var(--shadow);color:var(--primary)}
-    .faucet-desc__guarantee-box h3{font-size:clamp(20px,3vw,24px);color:var(--primary);margin-bottom:20px;text-align:center}
+    .faucet-desc__guarantee-box{background:linear-gradient(135deg,var(--bg-dark-brown) 0%,#5A3D2A 100%);border:2px solid var(--accent);border-radius:0;padding:clamp(30px,4vw,50px) clamp(20px,3vw,30px);margin:40px -16px;box-shadow:0 8px 25px var(--shadow-dark);color:var(--primary-light)}
+    .faucet-desc__guarantee-box h3{font-size:clamp(20px,3vw,24px);color:var(--primary-light);margin-bottom:20px;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,0.2)}
     .faucet-desc__guarantee-box ul{list-style:none;padding:0;margin:0 0 20px 0}
-    .faucet-desc__guarantee-box li{padding:12px 0 12px 35px;position:relative;font-size:clamp(14px,1.5vw,16px);line-height:1.6;color:var(--primary);border-bottom:1px solid rgba(73,48,32,.15)}
+    .faucet-desc__guarantee-box li{padding:12px 0 12px 35px;position:relative;font-size:clamp(14px,1.5vw,16px);line-height:1.6;color:var(--primary-light);border-bottom:1px solid rgba(249,88,69,.3)}
     .faucet-desc__guarantee-box li:last-child{border-bottom:none}
     .faucet-desc__guarantee-box li:before{content:"🛡️";position:absolute;left:0;font-size:20px}
     .faucet-desc__guarantee-box li strong{color:var(--accent)}
-    .faucet-desc__guarantee-box p{text-align:center;color:var(--muted-dark);font-style:italic;margin:0;font-size:clamp(12px,1.5vw,14px)}
+    .faucet-desc__guarantee-box p{text-align:center;color:var(--muted-light);font-style:italic;margin:0;font-size:clamp(12px,1.5vw,14px)}
 
     /* Review Stats */
     .faucet-desc__review-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:30px;padding:25px;background:linear-gradient(135deg,#fff 0%,var(--bg-warm) 100%);border-radius:12px;border:2px solid var(--border-color)}
@@ -222,11 +225,49 @@
 
     /* ========== MOBILE RESPONSIVE FIXES ========== */
     @media (max-width: 768px){
-      /* Header adjustments */
+      /* Header stays dark but adjust margins */
       .faucet-desc__header{margin:-24px -16px 0;padding:clamp(40px,6vw,60px) clamp(16px,2vw,24px)}
 
       /* CTA sections stay dark but adjust padding */
       .faucet-desc__cta-section{margin:clamp(30px,4vw,40px) -16px}
+
+      /* Lighten Config section on mobile */
+      .faucet-desc__config{background:var(--bg-warm);color:var(--primary);margin:60px 0;padding:clamp(40px,6vw,60px) clamp(16px,2vw,24px)}
+      .faucet-desc__config h2{color:var(--primary);text-shadow:none}
+      .faucet-desc__config-intro{color:var(--muted-dark)}
+      .faucet-desc__config-slider-title{color:var(--border-color)}
+      .faucet-desc__config-grid{background:rgba(255,255,255,0.7);border-color:var(--border-color)}
+      .faucet-desc__config-section h3{color:var(--border-color)}
+
+      /* Lighten Features section on mobile */
+      .faucet-desc__features{background:var(--bg-warm);color:var(--primary);margin:clamp(60px,8vw,100px) 0;padding:clamp(40px,6vw,60px) clamp(16px,2vw,24px)}
+      .faucet-desc__features h2{color:var(--primary);border-bottom-color:var(--border-color);text-shadow:none}
+      .faucet-desc__features-list li{background:#fff;border-color:var(--border-color)}
+      .faucet-desc__features-list li:hover{border-color:var(--accent)}
+      .faucet-desc__feature-icon{background:var(--bg-warm)}
+      .faucet-desc__feature-content h4{color:var(--primary)}
+      .faucet-desc__feature-content p{color:var(--muted-dark)}
+
+      /* Lighten Specs section on mobile */
+      .faucet-desc__specs-section{background:var(--bg-warm);color:var(--primary);margin:clamp(60px,8vw,100px) 0;padding:clamp(40px,6vw,60px) clamp(16px,2vw,24px)}
+      .faucet-desc__specs-section h2{color:var(--primary);border-bottom-color:var(--border-color);text-shadow:none}
+      .faucet-desc__specs-section h3{color:var(--primary);text-shadow:none}
+      .faucet-desc__specs-section p{color:var(--muted-dark)}
+      .faucet-desc__specs-table{background:#fff;border-color:var(--border-color)}
+      .faucet-desc__specs-table td{color:var(--primary)}
+      .faucet-desc__specs-table td:first-child{color:var(--border-color);background:var(--bg-warm)}
+      .faucet-desc__specs-table td:last-child{color:var(--muted-dark)}
+      .faucet-desc__dimensions-grid{background:rgba(255,255,255,0.7);border-color:var(--border-color)}
+      .faucet-desc__dimension-label{color:var(--border-color)}
+      .faucet-desc__dimension-value{color:var(--primary)}
+      .faucet-desc__dimension-unit{color:var(--muted-dark)}
+      .faucet-desc__download{background:rgba(255,255,255,0.7);border-color:var(--border-color)}
+      .faucet-desc__download h3{color:var(--primary);text-shadow:none}
+      .faucet-desc__download p{color:var(--muted-dark)}
+
+      /* Guarantee box and FAQ stay dark but adjust padding */
+      .faucet-desc__guarantee-box{margin:40px -16px;padding:clamp(24px,4vw,36px) clamp(16px,2vw,24px)}
+      .faucet-desc__faq{margin-left:-16px;margin-right:-16px;padding:clamp(40px,6vw,60px) clamp(16px,2vw,24px)}
 
       /* Features Grid - Single Column on Mobile */
       .faucet-desc__features-list{grid-template-columns:1fr;gap:15px}
